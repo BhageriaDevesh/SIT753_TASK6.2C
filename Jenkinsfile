@@ -28,12 +28,14 @@ pipeline {
                 success {
                     mail to: "devesh.singhania23@gmail.com",
                     subject: "Pipeline Success: ${currentBuild.fullDisplayName}",
-                    body: "The pipeline executed successfully."
+                    body: "The pipeline executed successfully.",
+                    attachmentsPattern: '**/*.log'
                         }
                  failure {
                      mail to: "devesh.singhania23@gmail.com",
                      subject: "Pipeline Failure: ${currentBuild.fullDisplayName}",
-                    body: "The pipeline failed. Please check the logs for details."
+                    body: "The pipeline failed. Please check the logs for details.",
+                     attachmentsPattern: '**/*.log'
                          
     }
         }
@@ -53,12 +55,14 @@ pipeline {
                 success {
                     mail to: "devesh.singhania23@gmail.com",
                     subject: "Pipeline Success: ${currentBuild.fullDisplayName}",
-                    body: "The pipeline executed successfully."
+                    body: "The pipeline executed successfully.",
+                    attachmentsPattern: '**/*.log'
                         }
                  failure {
                      mail to: "devesh.singhania23@gmail.com",
                      subject: "Pipeline Failure: ${currentBuild.fullDisplayName}",
-                    body: "The pipeline failed. Please check the logs for details."
+                    body: "The pipeline failed. Please check the logs for details.",
+                    attachmentsPattern: '**/*.log'
                          
     }
         }
