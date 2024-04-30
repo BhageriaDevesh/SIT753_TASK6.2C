@@ -36,8 +36,7 @@ pipeline {
             steps {
                 echo "Running integration tests on staging environment" // Example: Selenium
             }
-        }
-      post {
+             post {
     success {
         emailext subject: "Pipeline Success: ${currentBuild.fullDisplayName}",
             body: "The pipeline executed successfully.",
@@ -48,6 +47,8 @@ pipeline {
             body: "The pipeline failed. Please check the logs for details.",
             to: "devesh.singhania23@gmail.com"
     }
+        }
+     
 }
 
 
